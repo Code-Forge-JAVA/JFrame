@@ -8,3 +8,7 @@ jPanel1.requestFocusInWindow(); // Focus on on something else then on  texfield
 
 jTextFieldNames.getText().isEmpty() //
 jTextFieldNames.getText().lenght()
+
+
+float numValue =  Float.parseFloat(jTextFieldNames.getText()) // From String To Number
+String.valueOf(numValue) // toNumber from String
