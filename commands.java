@@ -12,3 +12,8 @@ jTextFieldNames.getText().lenght()
 
 float numValue =  Float.parseFloat(jTextFieldNames.getText()) // From String To Number
 String.valueOf(numValue) // toNumber from String
+
+
+--->>>jTextArea
+jTextAreaUserNames.append(jTextFieldNames.getText() + "\n"); // append text
+jTextAreaUserNames.setText("");                              //lear All text area
