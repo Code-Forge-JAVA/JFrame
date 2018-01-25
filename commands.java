@@ -11,11 +11,17 @@ jTextFieldNames.getText().lenght();
 
 
 // convert datatypes
-float numValue =  Float.parseFloat(jTextFieldNames.getText()); // From String To Number
+float numValueFloat =  Float.parseFloat(jTextFieldNames.getText()); // From String To Number
 int numValueInt = Integer.parseInt(jTextFieldNames.getText());
 String.valueOf(numValue) // toNumber from String
+Double.toString(numValueFloat)
 
 
 --->>>jTextArea
 jTextAreaUserNames.append(jTextFieldNames.getText() + "\n"); // append text
 jTextAreaUserNames.setText("");                              //lear All text area
+
+
+-->>>jList
+String name[] = {"Name Named","YourName YouNamed"};
+    jList1.setListData(name);
