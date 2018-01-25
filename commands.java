@@ -6,11 +6,13 @@ jButtonNamesOK.setEnabled(true); // Enable to react to event (makes gray)
 jTextFieldNames.requestFocus(true);
 jPanel1.requestFocusInWindow(); // Focus on on something else then on  texfield
 
-jTextFieldNames.getText().isEmpty() //
-jTextFieldNames.getText().lenght()
+jTextFieldNames.getText().isEmpty(); //
+jTextFieldNames.getText().lenght();
 
 
-float numValue =  Float.parseFloat(jTextFieldNames.getText()) // From String To Number
+// convert datatypes
+float numValue =  Float.parseFloat(jTextFieldNames.getText()); // From String To Number
+int numValueInt = Integer.parseInt(jTextFieldNames.getText());
 String.valueOf(numValue) // toNumber from String
 
 
