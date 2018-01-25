@@ -6,6 +6,7 @@ jButtonNamesOK.setEnabled(true); // Enable to react to event (makes gray)
 jTextFieldNames.requestFocus(true);
 jPanel1.requestFocusInWindow(); // Focus on on something else then on  texfield
 
+
 jTextFieldNames.getText().isEmpty(); //
 jTextFieldNames.getText().lenght();
 
@@ -25,3 +26,9 @@ jTextAreaUserNames.setText("");                              //lear All text are
 -->>>jList
 String name[] = {"Name Named","YourName YouNamed"};
     jList1.setListData(name);
+
+-////Basic Syntax
+..String..
+
+String[] names = new String[4];
+String names[]={"Text1","Text2"}
