@@ -31,4 +31,10 @@ String name[] = {"Name Named","YourName YouNamed"};
 ..String..
 
 String[] names = new String[4];
-String names[]={"Text1","Text2"}
+String names[]={"Robert","Josh"}
+  --or
+int sizeUsers = 4;
+String[] names = new String[sizeUsers];  
+  --or
+String[] names = new String[4];
+String names[0]="Robert";
