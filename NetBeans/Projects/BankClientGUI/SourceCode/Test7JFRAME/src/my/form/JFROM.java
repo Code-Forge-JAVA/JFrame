@@ -288,6 +288,9 @@ public class JFROM extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTextFieldNames = new javax.swing.JTextField();
         jButtonNamesOK = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
 
         jMenu1.setText("jMenu1");
@@ -320,6 +323,14 @@ public class JFROM extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         setResizable(false);
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                formKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                formKeyTyped(evt);
+            }
+        });
 
         jPanelPin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelPin.setForeground(new java.awt.Color(255, 255, 255));
@@ -428,6 +439,16 @@ public class JFROM extends javax.swing.JFrame {
                     .addGroup(jPanelPinLayout.createSequentialGroup()
                         .addGroup(jPanelPinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelPinLayout.createSequentialGroup()
+                                .addGap(74, 74, 74)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelPinLayout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonDeleteUser, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanelPinLayout.createSequentialGroup()
+                        .addGroup(jPanelPinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelPinLayout.createSequentialGroup()
                                 .addGap(625, 625, 625)
                                 .addComponent(jButtonRemoveUser))
                             .addGroup(jPanelPinLayout.createSequentialGroup()
@@ -459,17 +480,7 @@ public class JFROM extends javax.swing.JFrame {
                                             .addComponent(jLabelPinDisplay2))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabelpasswordCount, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanelPinLayout.createSequentialGroup()
-                        .addGroup(jPanelPinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelPinLayout.createSequentialGroup()
-                                .addGap(74, 74, 74)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanelPinLayout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButtonDeleteUser, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanelPinLayout.setVerticalGroup(
             jPanelPinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -513,6 +524,7 @@ public class JFROM extends javax.swing.JFrame {
         );
 
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setToolTipText("New user  imput area");
         jPanel1.setAutoscrolls(true);
 
         jTextFieldNames.setFont(new java.awt.Font("Arabic Typesetting", 0, 22)); // NOI18N
@@ -569,6 +581,17 @@ public class JFROM extends javax.swing.JFrame {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
+        jLabel6.setFont(new java.awt.Font("Traditional Arabic", 1, 12)); // NOI18N
+        jLabel6.setText("Password: CTRL +  F3");
+        jLabel6.setToolTipText("Keyboard shortcut for autputing user password");
+
+        jLabel5.setFont(new java.awt.Font("Traditional Arabic", 1, 12)); // NOI18N
+        jLabel5.setText("ID: CTRL+ F2");
+        jLabel5.setToolTipText("Keyboard shortcut for autputing user ID");
+
+        jLabel4.setFont(new java.awt.Font("Traditional Arabic", 1, 12)); // NOI18N
+        jLabel4.setText("Pin: CTRL+ F1");
+        jLabel4.setToolTipText("Keyboard shortcut for autputing pin");
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -578,15 +601,25 @@ public class JFROM extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(214, 214, 214)
-                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(214, 214, 214)
+                                .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jPanelPin, javax.swing.GroupLayout.PREFERRED_SIZE, 536, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel6)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel5)
+                                .addGap(23, 23, 23)
+                                .addComponent(jLabel4)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanelPin, javax.swing.GroupLayout.PREFERRED_SIZE, 536, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -595,7 +628,12 @@ public class JFROM extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanelPin, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel4))
+                .addGap(9, 9, 9)
                 .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -700,22 +738,25 @@ public class JFROM extends javax.swing.JFrame {
     private void jButtonDeleteUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteUserActionPerformed
         String output;
         output = "Welcome to South Corea";
-        
+        int userCondition=-1;
        
            //do something
            
         String selectedName = jListUserNames.getSelectedValue();
+        
         int selectedIndex = jListUserNames.getSelectedIndex();
         
-        int userCondition =  JOptionPane.showConfirmDialog(null,"Do you want remove "+selectedName,"Winter quiz",JOptionPane.YES_NO_OPTION);
-       
-
+         if (selectedIndex >-1)
+            userCondition =  JOptionPane.showConfirmDialog(null,"Do you want remove "+selectedName,""+selectedName,JOptionPane.YES_NO_OPTION);
+         else
+            JOptionPane.showConfirmDialog(null,"Please select user to remove", "Warning",JOptionPane.DEFAULT_OPTION,JOptionPane.WARNING_MESSAGE);
+             
         if (selectedIndex > -1 && userCondition == 0) { // user return posetive
-
+            
             namesArray.remove(selectedIndex);
             jListUserNames.setListData(namesArray);
 
-            userfile.setRowRemove(0, 1, true, selectedName);
+            userfile.setRowRemove(0, 1, false, selectedName);
             userfile.uploadInFile();
             jLabelUserSelected.setText(""); // remove user label that was selected
             jButtonDeleteUser.setEnabled(false);
@@ -777,6 +818,21 @@ public class JFROM extends javax.swing.JFrame {
         setDataToTextBoxeIDPassword (true);
     }//GEN-LAST:event_jSpinnerUserPasswordStateChanged
 
+    private void formKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyReleased
+        // TODO add your handling code here:
+        
+        if (evt.isControlDown())
+            System.out.println("User Pressed SHIFT");
+        
+        
+        System.out.println("Was key Prssed KeyReleased.");
+    }//GEN-LAST:event_formKeyReleased
+
+    private void formKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyTyped
+     
+         System.out.println("Was key Prssed .KeyTyped .");
+    }//GEN-LAST:event_formKeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -825,6 +881,9 @@ public class JFROM extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabelPinDisplay;
     private javax.swing.JLabel jLabelPinDisplay2;
     private javax.swing.JLabel jLabelUserSelected;
